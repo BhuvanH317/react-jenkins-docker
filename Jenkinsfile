@@ -3,13 +3,13 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/react-jenkins-docker.git'
+                git 'https://github.com/BhuvanH317/react-jenkins-docker.git'
             }
         }
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("your-username/react-app:${env.BUILD_ID}")
+                    docker.build("bhuvanh317/react-app:${env.BUILD_ID}")
                 }
             }
         }
